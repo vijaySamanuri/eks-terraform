@@ -118,7 +118,7 @@ data "aws_eks_cluster_auth" "cluster" {
 
 # create demo namespace
 /* 
-resource "kubernetes_namespace" "password_manager_app" {
+resource "kubernetes_namespace" "demo_namespace" {
   metadata {
     labels = {
       application = "password-manager"
