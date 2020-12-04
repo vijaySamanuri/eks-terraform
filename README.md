@@ -1,10 +1,11 @@
 # eks-terraform
-This repo contains terraform scripts to provision eks from scratch and github workflow to automate 
+This repo contains terraform scripts to provision eks from scratch.
 
 ## Table of Contents
 
 - [Prerequisites](#prerequisites)
 - [Provision EKS cluster](#provision-eks-cluster)
+- [Delete EKS cluster](#delete-eks-cluster)
     
 ### Prerequisites:
 
@@ -42,7 +43,7 @@ This repo contains terraform scripts to provision eks from scratch and github wo
    ```shell
       terraform apply
    ``` 
-   this creates many aws resources required for eks cluster to run like vpc, security groups, autoscaling groups, eks cluster etc,
+   this creates many aws resources (47 resources) required for eks cluster to run like vpc, security groups, autoscaling groups, eks cluster etc,
    review the plan and confirm with `yes`
    
    This takes long time to create the above mentioned resources successfully (~10 mins), once completed you should see outputs mentioned in `outputs.tf`
@@ -56,3 +57,12 @@ This repo contains terraform scripts to provision eks from scratch and github wo
  * verify 
   
    execute sample command (ex: `kubectl get ns`)
+
+### Delete EKS cluster
+   
+   So far you have successfully created eks cluster by following above steps. If you don't want this eks cluster anymore or freee up resources you can delete the this cluster with the below command:
+   
+   ```shell
+   terraform destroy
+   ```
+ 
