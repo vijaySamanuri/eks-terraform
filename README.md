@@ -60,7 +60,7 @@ This repo contains terraform scripts to provision eks from scratch.
 
 ### Delete EKS cluster
    
-   So far you have successfully created eks cluster by following above steps. If you don't want this eks cluster anymore or free up resources you can delete the this cluster with the below command:
+   So far you have successfully created eks cluster by following above steps. If you don't want this eks cluster anymore or free up resources you can delete this cluster with the below command:
    
    ```shell
    terraform destroy
