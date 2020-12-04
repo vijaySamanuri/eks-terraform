@@ -20,7 +20,9 @@ This repo contains terraform scripts to provision eks from scratch and github wo
 
     create `~/.aws/credentials` file and put your credentials in it or just use `aws configure`
 
- * install [AWS IAM Authenticator](https://docs.aws.amazon.com/eks/latest/userguide/install-aws-iam-authenticator.html)
+ * install [AWS IAM Authenticator](https://docs.aws.amazon.com/eks/latest/userguide/install-aws-iam-authenticator.html) 
+   
+   > Note: Skip this installation if your aws cli version is >= 1.16.156, because `aws eks get-token` can get you the token.
 
  * install [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
 
