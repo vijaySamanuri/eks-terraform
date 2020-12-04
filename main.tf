@@ -39,6 +39,7 @@ resource "aws_security_group" "worker_group_mgmt_one" {
 }
 
 # choose region
+
 variable "region" {
   default     = "us-east-2"
   description = "AWS region"
@@ -85,6 +86,7 @@ module "vpc" {
 
 
 # create eks cluster 
+
 module "eks" {
   source          = "terraform-aws-modules/eks/aws"
   cluster_name    = local.cluster_name
